@@ -6,27 +6,19 @@ import Modal from '../Modal';
 import Input from '../Input';
 import { FormHandles } from '@unform/core';
 
+import { IFood } from '../../types';
+
 type ModalEditFoodFormData = {
   image: string;
   name: string;
   price: string;
   description: string;
 }
-
-interface FoodData {
-  id: number;
-  name: string;
-  description: string;
-  price: string;
-  available: boolean;
-  image: string;
-}
-
 interface ModalEditFoodProps {
   isOpen: boolean; 
   setIsOpen: () => void; 
   handleUpdateFood: (data: ModalEditFoodFormData) => void; 
-  editingFood: FoodData;
+  editingFood: IFood;
 }
 
 function ModalEditFood({

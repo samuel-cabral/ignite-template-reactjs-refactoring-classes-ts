@@ -12,7 +12,6 @@ type ModalAddFoodFormData = {
   price: string;
   description: string;
 }
-
 interface ModalAddFoodProps { 
   isOpen: boolean;
   setIsOpen: () => void;
